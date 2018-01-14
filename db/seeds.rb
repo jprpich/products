@@ -7,23 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Category.create(name: "Perfumes")
+Category.create(name: "Home")
 
 Category.create(name: "Books")
 
-Category.create(name: "Technology")
-
-Category.create(name: "Appliances")
-
-Category.create(name: "Home")
-
 Category.create(name: "Toys")
-
-Category.create(name: "Clothes")
-
-Category.create(name: "Office")
-
-Category.create(name: "Pets")
 
 
 
