@@ -1,0 +1,41 @@
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-1">
+    <h1>Products Target</h1>
+    <%=  link_to "new", new_product_path, class:"btn btn-primary"%>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Categories</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td>
+              <% product.categories.each do |category| %>
+                <%= category.name %>, 
+              <% end %>
+            </td>
+            <td>
+              
+              <%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %>
+              <%= link_to 'Delete', product_path(product), class: "btn btn-danger", method: :delete, data: {confirm: 'Are you sure?'} %>
+
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
