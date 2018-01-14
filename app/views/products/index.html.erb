@@ -1,11 +1,5 @@
-<br>
-<br>
-<br>
-<br>
-<div class="row">
-  <div class="col-md-6 col-md-offset-1">
     <h1>Products Target</h1>
-    <%=  link_to "new", new_product_path, class:"btn btn-primary"%>
+    <br>
     <table class="table">
       <thead>
         <tr>
@@ -13,6 +7,7 @@
           <th>Name</th>
           <th>Price</th>
           <th>Categories</th>
+          <th> <%=  link_to "New Product", new_product_path, class: "btn btn-primary" %></th>
         </tr>
       </thead>
 
@@ -37,5 +32,3 @@
         <% end %>
       </tbody>
     </table>
-  </div>
-</div>
